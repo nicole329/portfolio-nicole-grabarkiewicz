@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Code2, Github, Linkedin, Mail, Heart, GraduationCap } from "lucide-react";
+import { Code2, Mail, Heart, GraduationCap } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 
 export function Footer() {
   return (
@@ -62,7 +63,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-slate-400 hover:text-emerald-400 transition-colors"
               >
-                <Github className="w-4 h-4" />
+                <GithubIcon className="w-4 h-4" />
                 GitHub Profile
               </a>
               <a
@@ -71,7 +72,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-slate-400 hover:text-emerald-400 transition-colors"
               >
-                <Linkedin className="w-4 h-4" />
+                <LinkedinIcon className="w-4 h-4" />
                 LinkedIn
               </a>
               <Link

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Project } from "@/data/projects";
-import { ExternalLink, Github, ArrowRight, ShieldCheck, Cpu, Layers } from "lucide-react";
+import { ExternalLink, ArrowRight, ShieldCheck, Cpu, Layers } from "lucide-react";
+import { GithubIcon } from "@/components/Icons";
 
 interface ProjectCardProps {
   project: Project;
@@ -106,7 +107,7 @@ export function ProjectCard({ project, isFeatured = false }: ProjectCardProps) {
               rel="noopener noreferrer"
               className="text-xs text-slate-400 hover:text-slate-200 flex items-center gap-1.5"
             >
-              <Github className="w-4 h-4 text-slate-300" />
+              <GithubIcon className="w-4 h-4 text-slate-300" />
               GitHub Repository
             </a>
           )}
@@ -146,7 +147,7 @@ export function ProjectCard({ project, isFeatured = false }: ProjectCardProps) {
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-emerald-400 flex items-center gap-1 transition-colors"
           >
-            <Github className="w-3.5 h-3.5" />
+            <GithubIcon className="w-3.5 h-3.5" />
             Code auf GitHub
           </a>
         )}
