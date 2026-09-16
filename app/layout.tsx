@@ -1,23 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Playfair_Display, Caveat } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Nicole Grabarkiewicz | Web Developer Specialist Portfolio",
+  title: "Nicole Grabarkiewicz | Web Developer Specialist",
   description:
-    "Portfolio von Nicole Grabarkiewicz - Zertifizierte Web Developer Specialistin mit Expertise in React, Next.js, TypeScript, Prisma, PostgreSQL und Sicherheitsstandards.",
+    "Portfolio von Nicole Grabarkiewicz - Web Developer Specialist mit Leidenschaft für nutzerzentrierte digitale Produkte, React, Next.js und sauberen Code.",
 };
 
 export default function RootLayout({
@@ -28,9 +33,9 @@ export default function RootLayout({
   return (
     <html
       lang="de"
-      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${caveat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-slate-950 text-slate-100 font-sans selection:bg-emerald-500/30 selection:text-emerald-300">
+      <body className="min-h-full flex flex-col bg-[#fbf9f5] text-[#1c1d1a] font-sans selection:bg-[#e4ebe4] selection:text-[#1c1d1a]">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

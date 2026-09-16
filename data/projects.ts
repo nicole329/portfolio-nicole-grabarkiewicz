@@ -22,28 +22,50 @@ export interface Project {
   liveUrl?: string;
   detailUrl?: string;
   badge?: string;
+  imageBg?: string;
 }
 
 export const projectsData: Project[] = [
   {
+    id: "elternplanet",
+    title: "Elternplanet",
+    subtitle: "UX/UI Design · Teamprojekt",
+    period: "2025/2026",
+    featured: false,
+    technologies: ["Figma", "Design System", "Prototyping", "UX Research"],
+    description:
+      "Case Study und komplette Website in Figma. Mein Fokus: Konzeption, Design System, Webdesign und Prototyping.",
+    contributions: ["Konzeption & Wireframing", "Figma Design System", "Interactive Prototyping"]
+  },
+  {
+    id: "portfolio-framer",
+    title: "Portfolio (Framer)",
+    subtitle: "Webdesign · Eigene Umsetzung",
+    period: "2026",
+    featured: false,
+    technologies: ["Framer", "React", "Webdesign", "Custom Code"],
+    description:
+      "Diese Website – entwickelt mit Framer/React. Modern, schnell und individuell gestaltet.",
+    contributions: ["UI/UX Layout", "Framer Component Development", "Responsive Fine-tuning"]
+  },
+  {
     id: "slowline",
     title: "Slowline",
-    subtitle: "Slow Writing & Mindfulness Web App",
+    subtitle: "Full-Stack Web Application",
     period: "Juni 2026 – September 2026",
     featured: true,
-    badge: "Abschlussprojekt",
+    badge: "Hauptprojekt",
     technologies: [
       "Next.js 16",
       "React 19",
       "TypeScript",
       "Prisma ORM",
-      "PostgreSQL (Neon)",
-      "Tailwind CSS",
+      "PostgreSQL",
       "Argon2",
-      "HttpOnly Cookies"
+      "Tailwind CSS"
     ],
     description:
-      "Eine entschleunigte Schreibanwendung, bei der Nutzer über zeitlich begrenzte Schreibimpulse konzentriert schreiben und ihre Sessions in einem persönlichen Archiv speichern können.",
+      "Eine entschleunigende Schreib-App. Next.js, Prisma, PostgreSQL, Authentifizierung und Deployment.",
     longDescription:
       "In einer schnelllebigen digitalen Welt reduziert Slowline das Schreiben auf das Wesentliche: Ein Impulswort regt Gedanken an, ein sanfter Timer visualisiert den Fortschritt durch ein kletterndes Faultier-Maskottchen, und der Zen-Modus blendet alle Ablenkungen aus.",
     contributions: [
@@ -52,7 +74,7 @@ export const projectsData: Project[] = [
       "Datenbankmodellierung & Schema-Design mit Prisma & PostgreSQL",
       "Eigenentwickelte, sichere Cookie-basierte Session-Authentifizierung mit Argon2 Password Hashing",
       "Sessionverwaltung & Wort-API-Integration mit serverseitigem Caching",
-      "Responsive Design & CSS-Animationen für das Faultier-Maskottchen",
+      "Responsive Design & CSS-Animationen",
       "Performance- & Sicherheit-Optimierungen (HttpOnly Cookies, SQL-Injection Schutz)"
     ],
     problem:
@@ -88,55 +110,36 @@ export const projectsData: Project[] = [
     detailUrl: "/projects/slowline"
   },
   {
-    id: "kosmetikstudio",
-    title: "Kosmetikstudio Webauftritt",
-    subtitle: "Moderne Unternehmensseite & Buchungs-UI",
-    period: "März 2026 – Mai 2026",
-    featured: false,
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    description:
-      "Ein hochklassiges, responsives Web-Design für ein lokales Kosmetikstudio mit interaktiver Leistungsübersicht, Preisrechner und Termin-Anfrageformular.",
-    contributions: [
-      "Responsive Frontend-Entwicklung",
-      "Komponenten-basierte Preiskalkulation",
-      "Formular-Validierung & Kontaktschnittstelle",
-      "UI/UX Konzept mit eleganter Typografie"
-    ],
-    githubUrl: "https://github.com/nicolegrabarkiewicz",
-    liveUrl: "#"
-  },
-  {
-    id: "dev-dashboard",
-    title: "Developer Task & Workflow Dashboard",
-    subtitle: "Kanalisiertes Aufgaben- & Fortschrittstracking",
-    period: "Januar 2026 – Februar 2026",
+    id: "mybookspace",
+    title: "MyBookSpace",
+    subtitle: "Web Application",
+    period: "2026",
     featured: false,
     technologies: ["React", "TypeScript", "Tailwind CSS", "REST API"],
     description:
-      "Interaktives Kanban- & Task-Board zur Organisation von Lernzielen, Code-Snippets und täglichen Programmieraufgaben.",
-    contributions: [
-      "Drag-and-Drop Task Management UI",
-      "LocalStorage Persistence & Context API State",
-      "Filter- & Suchfunktionalität für Code-Snippets"
-    ],
-    githubUrl: "https://github.com/nicolegrabarkiewicz",
-    liveUrl: "#"
+      "Persönliche Bücherverwaltung mit React. Bücher entdecken, verwalten und bewerten.",
+    contributions: ["React UI Development", "State Management", "Book API Integration"]
   },
   {
-    id: "weather-pulse",
-    title: "Weather Pulse App",
-    subtitle: "Echtzeit-Wetteranwendung mit Geo-Location",
-    period: "November 2025 – Dezember 2025",
+    id: "hr-projekt",
+    title: "HR-Projekt Gruppe 1",
+    subtitle: "Teamprojekt",
+    period: "2026",
     featured: false,
-    technologies: ["React", "JavaScript (ES6+)", "OpenWeather API", "CSS Modules"],
+    technologies: ["React", "Teamwork", "Agile", "Frontend"],
     description:
-      "Minimalistische Wetter-App mit Abruf aktueller Daten, 5-Tages-Vorhersage und dynamischen Hintergründen je nach Wetterlage.",
-    contributions: [
-      "Anbindung der OpenWeather Map REST API",
-      "Fehlerbehandlung & Loading States",
-      "Geolokalisation des Nutzers"
-    ],
-    githubUrl: "https://github.com/nicolegrabarkiewicz",
-    liveUrl: "#"
+      "Weblösung für HR-Prozesse. Konzeption, Frontend-Entwicklung und Teamarbeit.",
+    contributions: ["Frontend Komponenten", "Team Collaboration", "UI Refactoring"]
+  },
+  {
+    id: "filmroulette",
+    title: "Filmroulette",
+    subtitle: "React Application",
+    period: "2025/2026",
+    featured: false,
+    technologies: ["React", "JavaScript", "Movie Database API", "SPA"],
+    description:
+      "Zufällige Filmempfehlungen basierend auf deinen Vorlieben. SPA mit React.",
+    contributions: ["API Integration", "Filter Algorithm", "Dynamic UI"]
   }
 ];

@@ -1,81 +1,108 @@
 import Link from "next/link";
-import { ArrowRight, Code2, GraduationCap, ShieldCheck, Sparkles, FolderGit2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
-  const techStack = [
-    "React 19",
-    "Next.js 16",
-    "TypeScript",
-    "Prisma ORM",
-    "PostgreSQL (Neon)",
-    "Tailwind CSS",
-    "Argon2 Security"
-  ];
-
   return (
-    <section className="relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-24">
-      {/* Radial background gradients */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center">
+    <section className="relative pt-12 pb-20 md:pt-16 md:pb-28 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Certified Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-emerald-500/30 text-emerald-300 text-xs md:text-sm font-semibold mb-6 shadow-lg shadow-emerald-950/40 backdrop-blur-md">
-            <GraduationCap className="w-4 h-4 text-emerald-400" />
-            <span>Zertifiziert: <strong>Web Developer Specialist</strong> (September 2026)</span>
-          </div>
-
-          {/* Main Title */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-100 tracking-tight leading-[1.1] max-w-4xl mb-6">
-            Nicole Grabarkiewicz
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500 mt-2">
-              Web Developer Specialist
+          {/* Left Column: Text & CTAs */}
+          <div className="lg:col-span-6 space-y-6">
+            <span className="text-xs font-mono tracking-widest text-[#787973] uppercase font-semibold">
+              DESIGN. DEVELOP. CREATE.
             </span>
-          </h1>
 
-          {/* Intro Lead */}
-          <p className="text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed mb-8">
-            Vom UI-Design bis zur voll funktionsfähigen Webanwendung. Ich entwickle moderne, typensichere Frontend- & Backend-Systeme mit klarem Fokus auf Performance, Usability und Sicherheit.
-          </p>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif-title font-normal text-[#1c1d1a] tracking-tight leading-[1.05]">
+              Nicole <br />
+              Grabarkiewicz
+            </h1>
 
-          {/* Tech Stack Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 max-w-3xl mb-10">
-            {techStack.map((tech) => (
-              <span
-                key={tech}
-                className="px-3.5 py-1.5 rounded-full text-xs font-mono font-medium bg-slate-900/80 text-slate-200 border border-slate-800 shadow-sm"
+            <p className="text-xl sm:text-2xl font-sans font-medium text-[#4a4d46]">
+              Web Developer Specialist
+            </p>
+
+            <p className="text-base sm:text-lg text-[#555850] max-w-lg leading-relaxed">
+              Ich gestalte und <strong>entwickle</strong> digitale Produkte – von der Idee bis zur Umsetzung. Mit einem Blick für Nutzerbedürfnisse, einem klaren Design und sauberem Code.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <Link
+                href="/#projekte"
+                className="px-7 py-3.5 rounded-full bg-[#232621] text-white text-sm font-medium hover:bg-[#363933] transition-all flex items-center gap-2 shadow-sm"
               >
-                {tech}
+                Meine Projekte ansehen
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/#ueber-mich"
+                className="px-7 py-3.5 rounded-full border border-[#232621] text-[#232621] text-sm font-medium hover:bg-[#232621]/5 transition-all"
+              >
+                Über mich
+              </Link>
+            </div>
+
+            {/* Handwritten Note */}
+            <div className="pt-4">
+              <span className="font-handwriting text-2xl text-[#6b6e65] block transform -rotate-1">
+                Ideen in digitale Erlebnisse verwandeln.
               </span>
-            ))}
+            </div>
           </div>
 
-          {/* Call to Actions */}
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/projects"
-              className="px-6 py-3.5 rounded-xl bg-emerald-500 text-slate-950 font-bold text-sm hover:bg-emerald-400 transition-all shadow-xl shadow-emerald-500/25 flex items-center gap-2 group"
-            >
-              <FolderGit2 className="w-4 h-4" />
-              Projekte ansehen
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+          {/* Right Column: Aesthetic Laptop & Desk Mockup Illustration */}
+          <div className="lg:col-span-6 relative">
+            <div className="relative mx-auto max-w-lg">
+              {/* Laptop Graphic Mockup Container */}
+              <div className="relative rounded-2xl bg-[#efebe4] p-4 shadow-xl border border-[#e2dcd2] transform hover:scale-[1.01] transition-transform duration-500">
+                
+                {/* Laptop Screen Frame */}
+                <div className="rounded-xl overflow-hidden bg-slate-900 border-4 border-slate-800 aspect-[16/10] shadow-inner relative">
+                  {/* Browser Bar */}
+                  <div className="h-6 bg-slate-800 px-3 flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                  </div>
+                  
+                  {/* Laptop Screen Content Mockup */}
+                  <div className="p-6 bg-[#f7f5ef] h-full flex flex-col justify-center items-center text-center">
+                    <span className="text-2xl font-serif-title text-[#232621] font-bold mb-2">
+                      Good ideas grow here.
+                    </span>
+                    <div className="w-16 h-16 rounded-full bg-[#d8e0d8] flex items-center justify-center my-2">
+                      🌱
+                    </div>
+                    <span className="text-[10px] font-mono text-[#666860]">
+                      Slowline Web App · Journaling System
+                    </span>
+                  </div>
+                </div>
 
-            <Link
-              href="/projects/slowline"
-              className="px-6 py-3.5 rounded-xl bg-slate-900 border border-emerald-500/40 text-emerald-300 font-semibold text-sm hover:bg-emerald-500/10 hover:border-emerald-500/70 transition-all flex items-center gap-2"
-            >
-              <Sparkles className="w-4 h-4 text-emerald-400" />
-              Slowline Case Study
-            </Link>
+                {/* Laptop Base */}
+                <div className="h-3 bg-[#d5cfc4] rounded-b-xl max-w-xs mx-auto shadow-sm mt-1"></div>
+              </div>
 
-            <Link
-              href="/timeline"
-              className="px-6 py-3.5 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 font-medium text-sm hover:bg-slate-900 hover:text-slate-100 transition-all"
-            >
-              12-Monate Lernweg
-            </Link>
+              {/* Decorative Mug & Plant Overlay Elements */}
+              <div className="absolute -bottom-6 -right-4 bg-[#ffffff] border border-[#e6e2da] rounded-2xl p-4 shadow-lg flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[#eef2ee] flex items-center justify-center text-lg">
+                  ☕
+                </div>
+                <div className="text-xs">
+                  <p className="font-mono font-bold text-[#232621]">BETTER WEBSITES</p>
+                  <p className="font-mono text-[#6b6e65]">BRIGHTER DAYS ♥</p>
+                </div>
+              </div>
+
+              {/* Handwritten Note Top Right */}
+              <div className="absolute -top-6 right-2 hidden sm:block">
+                <span className="font-handwriting text-2xl text-[#232621] block transform rotate-3 bg-[#fffefb] px-3 py-1 rounded-lg border border-[#e8e4db] shadow-sm">
+                  "Kreativität trifft auf Technologie" ♡
+                </span>
+              </div>
+
+            </div>
           </div>
 
         </div>

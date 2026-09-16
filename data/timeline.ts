@@ -1,3 +1,43 @@
+export interface WayStep {
+  step: string;
+  title: string;
+  subtitle: string;
+  detail: string;
+}
+
+export const waySteps: WayStep[] = [
+  {
+    step: "01",
+    title: "UX/UI Design",
+    subtitle: "z. B. Elternplanet",
+    detail: "Figma"
+  },
+  {
+    step: "02",
+    title: "Webdesign",
+    subtitle: "Portfolio",
+    detail: "Framer"
+  },
+  {
+    step: "03",
+    title: "Frontend",
+    subtitle: "JavaScript, React",
+    detail: "Meine ersten Projekte"
+  },
+  {
+    step: "04",
+    title: "Full-Stack",
+    subtitle: "Next.js, Datenbanken",
+    detail: "Authentifizierung"
+  },
+  {
+    step: "05",
+    title: "Heute",
+    subtitle: "Web Developer Specialist",
+    detail: "bereit für neue Herausforderungen"
+  }
+];
+
 export interface TimelineItem {
   date: string;
   title: string;
@@ -27,7 +67,7 @@ export const timelineData: TimelineItem[] = [
     title: "React & Komponenten-Architektur",
     subtitle: "React Hooks, State & Props",
     description:
-      "Vertiefung in modernem React (Functional Components, useState, useEffect, useContext) und modulare UI-Entwicklung. Bau der 'Weather Pulse' App.",
+      "Vertiefung in modernem React (Functional Components, useState, useEffect, useContext) und modulare UI-Entwicklung.",
     tags: ["React", "REST API"]
   },
   {
@@ -35,7 +75,7 @@ export const timelineData: TimelineItem[] = [
     title: "TypeScript & Moderner Stack",
     subtitle: "Typensicherheit & Clean Code",
     description:
-      "Einführung von TypeScript für strikte Typisierung, Interfaces und Generics. Erstellung des 'Developer Task & Workflow Dashboards'.",
+      "Einführung von TypeScript für strikte Typisierung, Interfaces und Generics. Erstellung des 'Developer Task Dashboards'.",
     tags: ["TypeScript", "Tailwind CSS"]
   },
   {
@@ -43,7 +83,7 @@ export const timelineData: TimelineItem[] = [
     title: "Backend & Datenbank-Grundlagen",
     subtitle: "Node.js, PostgreSQL & Prisma ORM",
     description:
-      "Einstieg in relationale Datenbankmodelle, SQL, Prisma ORM und serverseitiges API-Design. Umsetzung eines Kundenprojekts für ein Kosmetikstudio.",
+      "Einstieg in relationale Datenbankmodelle, SQL, Prisma ORM und serverseitiges API-Design.",
     tags: ["PostgreSQL", "Prisma", "Node.js"]
   },
   {
@@ -51,7 +91,7 @@ export const timelineData: TimelineItem[] = [
     title: "Hauptprojekt Slowline (Fullstack)",
     subtitle: "Next.js App Router, Auth & Session-Management",
     description:
-      "Konzeption, Design und Entwicklung der Fullstack-Schreibanwendung 'Slowline' mit Wortimpuls-Generator, Faultier-Fortschrittsanimation, Argon2-Hashing und HttpOnly Session-Cookies.",
+      "Konzeption, Design und Entwicklung der Fullstack-Schreibanwendung 'Slowline' mit Wortimpuls-Generator, Argon2-Hashing und HttpOnly Session-Cookies.",
     tags: ["Next.js 16", "React 19", "Prisma", "PostgreSQL", "Argon2"]
   },
   {
