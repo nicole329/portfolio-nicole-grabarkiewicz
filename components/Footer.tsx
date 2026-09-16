@@ -8,13 +8,9 @@ export function Footer() {
         
         {/* Left Brand */}
         <div className="flex items-center gap-2">
-          <span className="font-serif-title font-bold text-[#1c1d1a]">N G</span>
-          <span>Nicole Grabarkiewicz</span>
-        </div>
-
-        {/* Center Tagline */}
-        <div className="font-medium text-[#4a4d46]">
-          Web Developer Specialist
+          <span className="font-serif-title font-bold text-[#1c1d1a]">Nicole Grabarkiewicz</span>
+          <span className="text-[#a8a69e]">•</span>
+          <span className="text-[#555850]">Web Developer Specialist</span>
         </div>
 
         {/* Right Links & Back to Top */}

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
+import { FeaturedSlowline } from "@/components/FeaturedSlowline";
+import { CertificationSection } from "@/components/CertificationSection";
 import { ProjectCard } from "@/components/ProjectCard";
 import { WaySection } from "@/components/WaySection";
 import { BottomSection } from "@/components/BottomSection";
@@ -8,11 +10,17 @@ import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-12">
       {/* 1. Hero Section */}
       <Hero />
 
-      {/* 2. Ausgewählte Projekte ("Meine Arbeit") */}
+      {/* 2. Slowline Prominent Hauptprojekt Showcase */}
+      <FeaturedSlowline />
+
+      {/* 3. IHK-Abschluss & Zertifikate Bereich */}
+      <CertificationSection />
+
+      {/* 4. Ausgewählte Projekte ("Meine Arbeit") */}
       <section id="projekte" className="max-w-7xl mx-auto px-6 lg:px-12 py-8">
         <div className="flex items-end justify-between mb-8">
           <div>
@@ -40,10 +48,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Mein Weg Stepper */}
+      {/* 5. Mein Weg Stepper (mit echten Projekten verknüpft) */}
       <WaySection />
 
-      {/* 4. Bottom Section (Über mich, Technologien, Kontakt-Banner) */}
+      {/* 6. Bottom Section (Über mich, Technologien, Kontakt-Banner) */}
       <BottomSection />
     </div>
   );

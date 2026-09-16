@@ -4,6 +4,7 @@ export interface Project {
   subtitle: string;
   period: string;
   featured: boolean;
+  isTeamProject?: boolean;
   technologies: string[];
   description: string;
   longDescription?: string;
@@ -20,34 +21,11 @@ export interface Project {
   }[];
   githubUrl?: string;
   liveUrl?: string;
-  detailUrl?: string;
+  detailUrl: string;
   badge?: string;
-  imageBg?: string;
 }
 
 export const projectsData: Project[] = [
-  {
-    id: "elternplanet",
-    title: "Elternplanet",
-    subtitle: "UX/UI Design · Teamprojekt",
-    period: "2025/2026",
-    featured: false,
-    technologies: ["Figma", "Design System", "Prototyping", "UX Research"],
-    description:
-      "Case Study und komplette Website in Figma. Mein Fokus: Konzeption, Design System, Webdesign und Prototyping.",
-    contributions: ["Konzeption & Wireframing", "Figma Design System", "Interactive Prototyping"]
-  },
-  {
-    id: "portfolio-framer",
-    title: "Portfolio (Framer)",
-    subtitle: "Webdesign · Eigene Umsetzung",
-    period: "2026",
-    featured: false,
-    technologies: ["Framer", "React", "Webdesign", "Custom Code"],
-    description:
-      "Diese Website – entwickelt mit Framer/React. Modern, schnell und individuell gestaltet.",
-    contributions: ["UI/UX Layout", "Framer Component Development", "Responsive Fine-tuning"]
-  },
   {
     id: "slowline",
     title: "Slowline",
@@ -110,15 +88,61 @@ export const projectsData: Project[] = [
     detailUrl: "/projects/slowline"
   },
   {
+    id: "elternplanet",
+    title: "Elternplanet",
+    subtitle: "UX/UI Design · Teamprojekt",
+    period: "2025/2026",
+    featured: false,
+    isTeamProject: true,
+    badge: "Teamprojekt",
+    technologies: ["Figma", "Design System", "Prototyping", "UX Research", "UI Architecture"],
+    description:
+      "Case Study und komplette Website in Figma. Mein Fokus: Konzeption, Design System, Webdesign und Prototyping.",
+    longDescription:
+      "Elternplanet ist ein im Team konzipiertes digitales Portal für Eltern. Als UX/UI-Spezialistin war ich federführend für die optische Gestaltungslinie, die Entwicklung des modularen Design Systems in Figma sowie die interaktiven High-Fidelity Prototypen verantwortlich.",
+    contributions: [
+      "Mein Beitrag: UX/UI-Konzeption & Informationsarchitektur im Team",
+      "Mein Beitrag: Aufbau des modularen Figma Design Systems (Farben, Typografie, UI-Komponenten)",
+      "Mein Beitrag: Responsive Webdesign & Grid-Layouts für Mobile, Tablet & Desktop",
+      "Mein Beitrag: Interaktive High-Fidelity Prototypen & Usability-Tests"
+    ],
+    detailUrl: "/projects/elternplanet"
+  },
+  {
+    id: "portfolio-framer",
+    title: "Portfolio (Framer)",
+    subtitle: "Webdesign · Eigene Umsetzung",
+    period: "2026",
+    featured: false,
+    technologies: ["Framer", "React", "Webdesign", "Custom Code", "Tailwind CSS"],
+    description:
+      "Diese Website – entwickelt mit Framer/React. Modern, schnell und individuell gestaltet.",
+    longDescription:
+      "Eine individuell konzipierte Entwickler-Portfolio-Seite. Fokus auf barrierefreie Typografie, sanfte Animationen und rasante Ladezeiten.",
+    contributions: [
+      "Konzeption & Vektor-Grafiken in Framer",
+      "Framer Component System & Custom React Layouts",
+      "Performance-Optimierung & Mobile-First Tuning"
+    ],
+    detailUrl: "/projects/portfolio-framer"
+  },
+  {
     id: "mybookspace",
     title: "MyBookSpace",
     subtitle: "Web Application",
     period: "2026",
     featured: false,
-    technologies: ["React", "TypeScript", "Tailwind CSS", "REST API"],
+    technologies: ["React", "TypeScript", "Tailwind CSS", "REST API", "LocalStorage"],
     description:
       "Persönliche Bücherverwaltung mit React. Bücher entdecken, verwalten und bewerten.",
-    contributions: ["React UI Development", "State Management", "Book API Integration"]
+    longDescription:
+      "Webanwendung zur Organisation der eigenen Bibliothek mit Suchfunktion, Kategorisierung, Lesestatus und Bewertungsfunktion.",
+    contributions: [
+      "React Component State Architecture",
+      "Integration externer Buch-APIs & Suchfilter",
+      "Lokale Persistenz & Bewertungssystem"
+    ],
+    detailUrl: "/projects/mybookspace"
   },
   {
     id: "hr-projekt",
@@ -126,20 +150,38 @@ export const projectsData: Project[] = [
     subtitle: "Teamprojekt",
     period: "2026",
     featured: false,
-    technologies: ["React", "Teamwork", "Agile", "Frontend"],
+    isTeamProject: true,
+    badge: "Teamprojekt",
+    technologies: ["React", "Teamwork", "Agile Workflow", "Frontend", "REST APIs"],
     description:
       "Weblösung für HR-Prozesse. Konzeption, Frontend-Entwicklung und Teamarbeit.",
-    contributions: ["Frontend Komponenten", "Team Collaboration", "UI Refactoring"]
+    longDescription:
+      "Kollaboratives Teamprojekt zur Digitalisierung interner HR-Prozesse (Bewerberübersicht, Status-Board, Teamverteilung).",
+    contributions: [
+      "Mein Beitrag: Frontend-Entwicklung der Dashboard-Komponenten",
+      "Mein Beitrag: Anbindung von API-Endpunkten im Team",
+      "Mein Beitrag: Agile Absprachen & Code-Reviews"
+    ],
+    detailUrl: "/projects/hr-projekt"
   },
   {
     id: "filmroulette",
     title: "Filmroulette",
-    subtitle: "React Application",
+    subtitle: "React Application · Teamprojekt",
     period: "2025/2026",
     featured: false,
-    technologies: ["React", "JavaScript", "Movie Database API", "SPA"],
+    isTeamProject: true,
+    badge: "Teamprojekt",
+    technologies: ["React", "JavaScript (ES6+)", "Movie Database API", "SPA", "Teamwork"],
     description:
       "Zufällige Filmempfehlungen basierend auf deinen Vorlieben. SPA mit React.",
-    contributions: ["API Integration", "Filter Algorithm", "Dynamic UI"]
+    longDescription:
+      "Im Team entwickelte interaktive Single Page Application, die über Zufallsgeneratoren und Genre-Filter maßgeschneiderte Filmvorschläge liefert.",
+    contributions: [
+      "Mein Beitrag: React Frontend-Komponenten & UI-Layouts im Team",
+      "Mein Beitrag: Integration der The Movie Database (TMDB) REST API",
+      "Mein Beitrag: Algorithmus für Genre-Filter & Zufallsempfehlungen"
+    ],
+    detailUrl: "/projects/filmroulette"
   }
 ];

@@ -13,6 +13,7 @@ export function Header() {
     { href: "/", label: "Home" },
     { href: "/#projekte", label: "Projekte" },
     { href: "/#ueber-mich", label: "Über mich" },
+    { href: "/#ihk-abschluss", label: "IHK-Abschluss" },
     { href: "/#mein-weg", label: "Mein Weg" },
     { href: "/#kontakt", label: "Kontakt" },
   ];
@@ -20,13 +21,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-[#fbf9f5]/90 backdrop-blur-md border-b border-[#e6e2da]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-        {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full border border-[#d4ceb8] flex items-center justify-center font-serif-title font-bold text-lg text-[#1c1d1a] bg-white shadow-sm">
-            N G
-          </div>
-          <span className="text-lg font-bold text-[#1c1d1a] tracking-tight group-hover:text-[#4a4d46] transition-colors">
+        {/* Brand Name (Text Only) */}
+        <Link href="/" className="flex flex-col group">
+          <span className="text-xl font-serif-title font-bold text-[#1c1d1a] tracking-tight group-hover:text-[#4a4d46] transition-colors">
             Nicole Grabarkiewicz
+          </span>
+          <span className="text-[11px] font-sans font-medium text-[#787973] uppercase tracking-wider">
+            Web Developer Specialist
           </span>
         </Link>
 
