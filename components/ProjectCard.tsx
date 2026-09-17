@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Project } from "@/data/projects";
 import { ArrowRight } from "lucide-react";
 
@@ -74,8 +75,17 @@ export function ProjectCard({ project, isFeatured = false }: ProjectCardProps) {
       }`}
     >
       {/* Project Image Box */}
-      <div className="rounded-xl overflow-hidden aspect-[16/10] mb-4 border border-[#e2dcd0]">
-        {getCardGraphic(project.id)}
+      <div className="rounded-xl overflow-hidden aspect-[16/10] mb-4 border border-[#e2dcd0] relative">
+        {project.imageUrl ? (
+          <Image
+            src={project.imageUrl}
+            alt={project.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        ) : (
+          getCardGraphic(project.id)
+        )}
       </div>
 
       {/* Project Metadata */}

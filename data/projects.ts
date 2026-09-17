@@ -21,6 +21,8 @@ export interface Project {
   }[];
   githubUrl?: string;
   liveUrl?: string;
+  figmaUrl?: string;
+  imageUrl?: string;
   detailUrl: string;
   badge?: string;
 }
@@ -85,6 +87,7 @@ export const projectsData: Project[] = [
     ],
     githubUrl: "https://github.com/nicolegrabarkiewicz/slowline",
     liveUrl: "https://slowline.vercel.app",
+    imageUrl: "/images/slowline-preview.png",
     detailUrl: "/projects/slowline"
   },
   {
@@ -110,6 +113,11 @@ export const projectsData: Project[] = [
       "Mein Beitrag: Responsive Webdesign & Grid-Layouts für Mobile, Tablet & Desktop",
       "Mein Beitrag: Interaktive High-Fidelity Prototypen & Usability-Tests"
     ],
+    figmaUrl:
+      "https://www.figma.com/proto/biSE10NdHur9ToUKbLqaQZ/nicole-grabarkiewicz?node-id=2539-9823&viewport=436%2C549%2C0.02&t=ynIN3LKIp5VMTMfu-1&scaling=fit-width&content-scaling=fixed&starting-point-node-id=2539%3A9823&page-id=2003%3A77",
+    liveUrl:
+      "https://www.figma.com/proto/biSE10NdHur9ToUKbLqaQZ/nicole-grabarkiewicz?node-id=2539-9823&viewport=436%2C549%2C0.02&t=ynIN3LKIp5VMTMfu-1&scaling=fit-width&content-scaling=fixed&starting-point-node-id=2539%3A9823&page-id=2003%3A77",
+    imageUrl: "/images/elternplanet-preview.png",
     detailUrl: "/projects/elternplanet"
   },
   {

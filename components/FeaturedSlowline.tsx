@@ -106,22 +106,13 @@ export function FeaturedSlowline() {
 
             {/* Right Asset Frame (5 cols) */}
             <div className="lg:col-span-5 relative">
-              <div className="rounded-2xl bg-[#e4ebe4] border border-[#cbd8cb] p-6 text-center flex flex-col items-center justify-center relative overflow-hidden min-h-[320px] shadow-inner">
-                {/* Real Sloth Asset Image */}
-                <div className="relative w-48 h-48 mb-3">
-                  <Image
-                    src="/images/Sloth3.png"
-                    alt="Slowline Sloth Mascot"
-                    fill
-                    className="object-contain hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <span className="font-serif-title text-2xl font-bold text-[#1c1d1a]">
-                  Slowline Schreibraum
-                </span>
-                <span className="text-xs font-mono text-[#555850] mt-1">
-                  Achtsames Journaling & Impulse
-                </span>
+              <div className="rounded-2xl bg-[#e4ebe4] border border-[#cbd8cb] overflow-hidden relative aspect-[16/10] shadow-md group">
+                <Image
+                  src="/images/slowline-preview.png"
+                  alt="Slowline App Preview"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
             </div>
 
