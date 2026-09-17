@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 
@@ -22,9 +23,14 @@ export function BottomSection() {
           
           {/* Column 1: Über mich mit Profilbild (5 cols) */}
           <div className="lg:col-span-5 bg-[#ffffff] border border-[#e6e2da] rounded-3xl p-6 md:p-8 flex flex-col sm:flex-row items-center gap-6 shadow-sm">
-            {/* Avatar / Portrait Mockup */}
-            <div className="w-32 h-36 rounded-2xl bg-[#eae6dc] overflow-hidden shrink-0 border border-[#d8d2c4] flex items-center justify-center text-4xl shadow-inner">
-              👩‍💻
+            {/* Real Portrait Image with White Background */}
+            <div className="relative w-32 h-36 rounded-2xl overflow-hidden shrink-0 border border-[#d8d2c4] shadow-md group bg-white">
+              <Image
+                src="/images/nicole.jpg"
+                alt="Nicole Grabarkiewicz"
+                fill
+                className="object-cover object-top mix-blend-screen group-hover:scale-105 transition-transform duration-300"
+              />
             </div>
 
             <div className="space-y-3 text-center sm:text-left">

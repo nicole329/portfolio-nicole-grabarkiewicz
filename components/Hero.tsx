@@ -10,9 +10,19 @@ export function Hero() {
           
           {/* Left Column: Text & CTAs */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#e4ebe4] border border-[#d2dcd2] text-[#232621] text-xs font-semibold">
-              <span className="w-2 h-2 rounded-full bg-[#3d5a3d] animate-pulse"></span>
-              Zertifiziert: Web Developer Specialist (September 2026)
+            <div className="flex items-center gap-3">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#3d5a3d] shadow-sm shrink-0 bg-white">
+                <Image
+                  src="/images/nicole.jpg"
+                  alt="Nicole Grabarkiewicz"
+                  fill
+                  className="object-cover object-top mix-blend-screen"
+                />
+              </div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#e4ebe4] border border-[#d2dcd2] text-[#232621] text-xs font-semibold">
+                <span className="w-2 h-2 rounded-full bg-[#3d5a3d] animate-pulse"></span>
+                Zertifiziert: Web Developer Specialist (September 2026)
+              </div>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif-title font-normal text-[#1c1d1a] tracking-tight leading-[1.08]">
