@@ -108,10 +108,10 @@ export function FeaturedSlowline() {
             <div className="lg:col-span-5 relative">
               <div className="rounded-2xl bg-[#e4ebe4] border border-[#cbd8cb] overflow-hidden relative aspect-[16/10] shadow-md group">
                 <Image
-                  src="/images/slowline-preview.png"
+                  src="/images/slowline-main.png"
                   alt="Slowline App Preview"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>

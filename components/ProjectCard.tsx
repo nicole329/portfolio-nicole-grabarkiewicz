@@ -81,7 +81,7 @@ export function ProjectCard({ project, isFeatured = false }: ProjectCardProps) {
             src={project.imageUrl}
             alt={project.title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
           getCardGraphic(project.id)
