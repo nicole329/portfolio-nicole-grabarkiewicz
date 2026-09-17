@@ -100,6 +100,10 @@ export const projectsData: Project[] = [
       "Case Study und komplette Website in Figma. Mein Fokus: Konzeption, Design System, Webdesign und Prototyping.",
     longDescription:
       "Elternplanet ist ein im Team konzipiertes digitales Portal für Eltern. Als UX/UI-Spezialistin war ich federführend für die optische Gestaltungslinie, die Entwicklung des modularen Design Systems in Figma sowie die interaktiven High-Fidelity Prototypen verantwortlich.",
+    problem:
+      "Entwicklung einer zugänglichen, vertrauensvollen Plattform für junge Eltern mit übersichtlicher Informationsarchitektur und modernem Look & Feel.",
+    solution:
+      "Ein durchgängiges Figma Design System mit warmem Farbklima, lesbaren Schriftarten, wiederverwendbaren UI-Komponenten und interaktivem Prototyping.",
     contributions: [
       "Mein Beitrag: UX/UI-Konzeption & Informationsarchitektur im Team",
       "Mein Beitrag: Aufbau des modularen Figma Design Systems (Farben, Typografie, UI-Komponenten)",
@@ -119,10 +123,31 @@ export const projectsData: Project[] = [
       "Diese Website – entwickelt mit Framer/React. Modern, schnell und individuell gestaltet.",
     longDescription:
       "Eine individuell konzipierte Entwickler-Portfolio-Seite. Fokus auf barrierefreie Typografie, sanfte Animationen und rasante Ladezeiten.",
+    problem:
+      "Erstellung eines herausstechenden Web-Portfolios für Bewerbungen als Web Developer Specialist, das persönliches Designgefühl mit technischer Präzision verbindet.",
+    solution:
+      "Umsetzung im Framer- & React-Ökosystem mit warmer Farbpalette, serif-betonten Überschriften, interaktivem 5-Stufen Stepper und responsivem Karten-Grid.",
+    architecture: [
+      { step: "Design System & Typografie", description: "Farbschema (Warm Beige & Dark Charcoal) und Serif-Schriften" },
+      { step: "Hero Workspace Illustration", description: "Stylischer Laptop-Mockup Rahmen mit Handschrift-Notizen" },
+      { step: "Projekte & Case Studies Grid", description: "Interaktive Projektkarten mit Schnellzugriff & Tags" },
+      { step: "5-Stufen Stepper 'Mein Weg'", description: "Visueller Lern- und Entwicklungspfad mit Projektverknüpfungen" }
+    ],
+    techDecisions: [
+      {
+        title: "Warum Framer & React Custom Layouts?",
+        rationale: "Maximale kreative Freiheit bei der Gestaltung von Micro-Interactions gepaart mit komponentenbasierter React-Architektur."
+      },
+      {
+        title: "Warum reduzierte Farbpalette (Warm Beige/Charcoal)?",
+        rationale: "Vermittelt Eleganz, Ruhe und hohe Professionalität im Vergleich zu überladenen Standard-Templates."
+      }
+    ],
     contributions: [
-      "Konzeption & Vektor-Grafiken in Framer",
-      "Framer Component System & Custom React Layouts",
-      "Performance-Optimierung & Mobile-First Tuning"
+      "Visual Identity & Typografie-Konzeption (Playfair Serif & Inter Sans)",
+      "Layout-Architektur: Hero-Bereich mit Desk-Mockup, 6-Karten-Grid & 5-Stufen Stepper",
+      "Umsetzung von interaktiven Micro-Interactions & Hover-Effekten",
+      "Barrierefreies Webdesign (Accessibility, Kontraste & responsive Breakpoints)"
     ],
     detailUrl: "/projects/portfolio-framer"
   },
@@ -137,6 +162,10 @@ export const projectsData: Project[] = [
       "Persönliche Bücherverwaltung mit React. Bücher entdecken, verwalten und bewerten.",
     longDescription:
       "Webanwendung zur Organisation der eigenen Bibliothek mit Suchfunktion, Kategorisierung, Lesestatus und Bewertungsfunktion.",
+    problem:
+      "Bücherfreunde suchen nach einer unkomplizierten Möglichkeit, gelesene und geplante Bücher ohne überladene Social-Features zu organisieren.",
+    solution:
+      "Reaktives Single Page Application Dashboard mit dynamischen Filteroptionen, Suchleiste und lokaler Datenspeicherung.",
     contributions: [
       "React Component State Architecture",
       "Integration externer Buch-APIs & Suchfilter",
@@ -157,6 +186,10 @@ export const projectsData: Project[] = [
       "Weblösung für HR-Prozesse. Konzeption, Frontend-Entwicklung und Teamarbeit.",
     longDescription:
       "Kollaboratives Teamprojekt zur Digitalisierung interner HR-Prozesse (Bewerberübersicht, Status-Board, Teamverteilung).",
+    problem:
+      "Unübersichtliche analoge oder veraltete Bewerber- und Teamprozesse in Unternehmen.",
+    solution:
+      "Ein übersichtliches HR-Dashboard mit Status-Kanban, Bewerberlisten und Teamzuordnung im agilen Entwicklerteam.",
     contributions: [
       "Mein Beitrag: Frontend-Entwicklung der Dashboard-Komponenten",
       "Mein Beitrag: Anbindung von API-Endpunkten im Team",
@@ -177,6 +210,10 @@ export const projectsData: Project[] = [
       "Zufällige Filmempfehlungen basierend auf deinen Vorlieben. SPA mit React.",
     longDescription:
       "Im Team entwickelte interaktive Single Page Application, die über Zufallsgeneratoren und Genre-Filter maßgeschneiderte Filmvorschläge liefert.",
+    problem:
+      "Nutzer verbringen oft zu viel Zeit mit dem Durchsuchen von Streaming-Katalogen, ohne eine Entscheidung zu treffen.",
+    solution:
+      "Eine spielerische 'Filmroulette' SPA mit Instant-Genre-Filtern und direkten Filmdetails.",
     contributions: [
       "Mein Beitrag: React Frontend-Komponenten & UI-Layouts im Team",
       "Mein Beitrag: Integration der The Movie Database (TMDB) REST API",
