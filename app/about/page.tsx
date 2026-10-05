@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { GraduationCap, Award, BookOpen, Code2, CheckCircle2, ArrowRight, ShieldCheck } from "lucide-react";
 
 export const metadata = {
@@ -10,12 +11,21 @@ export default function AboutPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 space-y-16">
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+      <div className="text-center max-w-3xl mx-auto space-y-4">
+        <div className="relative w-28 h-36 rounded-2xl overflow-hidden mx-auto border-2 border-emerald-500/40 shadow-xl bg-slate-900">
+          <Image
+            src="/images/nicole.jpg"
+            alt="Nicole Grabarkiewicz"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+        </div>
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
           <GraduationCap className="w-4 h-4" />
           Web Developer Specialist
         </div>
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-100 tracking-tight mb-6">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-100 tracking-tight">
           Über Mich & Mein Profil
         </h1>
         <p className="text-lg text-slate-300 leading-relaxed">

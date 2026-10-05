@@ -49,7 +49,7 @@ export const skillCategories: SkillCategory[] = [
     description: "Versionsverwaltung, Cloud-Hosting & CI/CD",
     skills: [
       { name: "Vercel", description: "Zero-Config Serverless Deployment, Edge Functions, Preview Builds" },
-      { name: "Git & GitHub", description: "Branching, Pull Requests, Commit Standards" },
+      { name: "Git & Versionskontrolle", description: "Branching, Pull Requests, Commit Standards" },
       { name: "Neon Database", description: "Cloud Serverless PostgreSQL, Database Branching" },
       { name: "VS Code & Dev Tools", description: "Debugging, Extensions, Linting (ESLint, Prettier)" }
     ]

@@ -85,7 +85,6 @@ export const projectsData: Project[] = [
         rationale: "Automatische Skalierung, schnelles Branching für Entwicklungszwecke und kosteneffizientes Cloud-Hosting."
       }
     ],
-    githubUrl: "https://github.com/nicolegrabarkiewicz/slowline",
     liveUrl: "https://slowline.vercel.app",
     imageUrl: "/images/slowline-main.png",
     detailUrl: "/projects/slowline"

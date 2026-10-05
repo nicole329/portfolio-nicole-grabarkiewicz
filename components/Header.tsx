@@ -77,11 +77,11 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <div className="pt-2">
+          <div className="pt-2 flex justify-start">
             <Link
-              href="/#kontakt"
+              href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="block w-full py-2.5 rounded-full bg-[#232621] text-white text-center font-medium text-sm"
+              className="inline-block px-5 py-2 rounded-full bg-[#232621] text-white text-center font-medium text-xs shadow-sm hover:bg-[#363933] transition-colors"
             >
               Kontakt aufnehmen
             </Link>

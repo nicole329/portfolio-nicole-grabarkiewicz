@@ -95,11 +95,12 @@ export const timelineData: TimelineItem[] = [
     tags: ["Next.js 16", "React 19", "Prisma", "PostgreSQL", "Argon2"]
   },
   {
-    date: "September 2026",
-    title: "🎓 Web Developer Specialist bestanden",
-    subtitle: "Erfolgreicher Zertifikatsabschluss",
+    date: "15. September 2026",
+    title: "🎓 Web Development Specialist IHK",
+    subtitle: "Zertifikatsabschluss · IHK Akademie München und Oberbayern gGmbH",
     description:
-      "Auszeichnung als Web Developer Specialist mit nachgewiesener Expertise in moderner Frontend- und Backend-Webentwicklung, Datenbank-Design und Sicherheit.",
+      "Erfolgreicher Lehrgangsabschluss als 'Web Development Specialist IHK' an der IHK Akademie München und Oberbayern. Nachgewiesene Qualifikation in React.js, Frontend-Frameworks, State Management, Routing, modernen CSS-Frameworks sowie Performance-Optimierung und Testing.",
+    tags: ["IHK Zertifikat", "React.js", "State Management", "CSS Frameworks", "Testing & Performance"],
     isHighlight: true
   }
 ];

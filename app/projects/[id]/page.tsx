@@ -2,7 +2,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projectsData } from "@/data/projects";
 import { ArrowLeft, ExternalLink, ShieldCheck, CheckCircle2, Layers, Cpu, Users, Server } from "lucide-react";
-import { GithubIcon } from "@/components/Icons";
 
 interface ProjectDetailPageProps {
   params: Promise<{ id: string }>;
@@ -214,20 +213,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
       </div>
 
       {/* Actions */}
-      <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-[#e6e2da]">
-        {project.githubUrl ? (
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-3 rounded-xl bg-[#ffffff] border border-[#232621] text-[#232621] text-sm font-medium hover:bg-[#232621]/5 transition-colors flex items-center gap-2"
-          >
-            <GithubIcon className="w-4 h-4" />
-            Code auf GitHub untersuchen
-          </a>
-        ) : (
-          <span className="text-xs text-[#787973] italic">Eigenes Design- & Webprojekt</span>
-        )}
+      <div className="flex flex-wrap items-center justify-end gap-4 pt-6 border-t border-[#e6e2da]">
         <Link
           href="/#projekte"
           className="px-6 py-3 rounded-xl bg-[#232621] text-white font-bold text-sm hover:bg-[#363933] transition-colors shadow-sm flex items-center gap-2"

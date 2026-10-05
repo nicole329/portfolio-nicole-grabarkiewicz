@@ -18,7 +18,6 @@ import {
   History,
   TrendingUp,
 } from "lucide-react";
-import { GithubIcon } from "@/components/Icons";
 
 export const metadata = {
   title: "Slowline – Case Study & Architektur | Nicole Grabarkiewicz",
@@ -78,16 +77,6 @@ export default function SlowlineDetailPage() {
             >
               Live Anwendung öffnen
               <ExternalLink className="w-4 h-4" />
-            </a>
-
-            <a
-              href="https://github.com/nicolegrabarkiewicz/slowline"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium text-[#1F241F] bg-white border border-[#E8E5DF] hover:bg-[#FAF8F5] transition-all shadow-2xs"
-            >
-              <GithubIcon className="w-4 h-4" />
-              GitHub Repository
             </a>
           </div>
 

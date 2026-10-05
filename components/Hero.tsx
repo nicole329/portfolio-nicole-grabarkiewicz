@@ -11,12 +11,12 @@ export function Hero() {
           {/* Left Column: Text & CTAs */}
           <div className="lg:col-span-6 space-y-6">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#3d5a3d] shadow-sm shrink-0 bg-white">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#3d5a3d] shadow-sm shrink-0 bg-[#1c1d1a]">
                 <Image
                   src="/images/nicole.jpg"
                   alt="Nicole Grabarkiewicz"
                   fill
-                  className="object-cover object-top mix-blend-screen"
+                  className="object-cover object-top"
                 />
               </div>
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#e4ebe4] border border-[#d2dcd2] text-[#232621] text-xs font-semibold">

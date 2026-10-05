@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/Icons";
+import { ArrowRight, Mail, Phone } from "lucide-react";
+import { LinkedinIcon } from "@/components/Icons";
 
 export function BottomSection() {
   const technologies = [
@@ -24,12 +24,12 @@ export function BottomSection() {
           {/* Column 1: Über mich mit Profilbild (5 cols) */}
           <div className="lg:col-span-5 bg-[#ffffff] border border-[#e6e2da] rounded-3xl p-6 md:p-8 flex flex-col sm:flex-row items-center gap-6 shadow-sm">
             {/* Real Portrait Image with White Background */}
-            <div className="relative w-32 h-36 rounded-2xl overflow-hidden shrink-0 border border-[#d8d2c4] shadow-md group bg-white">
+            <div className="relative w-32 h-40 rounded-2xl overflow-hidden shrink-0 border border-[#d8d2c4] shadow-md group bg-[#1c1d1a]">
               <Image
                 src="/images/nicole.jpg"
                 alt="Nicole Grabarkiewicz"
                 fill
-                className="object-cover object-top mix-blend-screen group-hover:scale-105 transition-transform duration-300"
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
               />
             </div>
 
@@ -88,37 +88,38 @@ export function BottomSection() {
             <div className="pt-6 relative z-10 space-y-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-full bg-[#232621] text-white text-xs font-semibold hover:bg-[#363933] transition-colors shadow-sm"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-2.5 rounded-full bg-[#232621] text-white text-xs font-semibold hover:bg-[#363933] transition-colors shadow-sm"
               >
                 Kontakt aufnehmen →
               </Link>
 
-              {/* Social Icons Row */}
-              <div className="flex items-center gap-4 text-[#363832]">
+              {/* Social & Contact Icons Row */}
+              <div className="flex flex-wrap items-center gap-4 text-[#363832]">
                 <a
-                  href="https://linkedin.com"
+                  href="mailto:n.grabarkiewicz@icloud.com"
+                  className="hover:text-[#1c1d1a] transition-colors flex items-center gap-1.5 text-xs font-medium"
+                  aria-label="E-Mail senden"
+                >
+                  <Mail className="w-4 h-4 text-[#3d5a3d]" />
+                  <span>n.grabarkiewicz@icloud.com</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/nicole-grabarkiewicz"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#1c1d1a] transition-colors"
-                  aria-label="LinkedIn"
+                  className="hover:text-[#1c1d1a] transition-colors flex items-center gap-1.5 text-xs font-medium"
+                  aria-label="LinkedIn Profile"
                 >
                   <LinkedinIcon className="w-4 h-4" />
+                  <span>LinkedIn</span>
                 </a>
                 <a
-                  href="https://github.com/nicolegrabarkiewicz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#1c1d1a] transition-colors"
-                  aria-label="GitHub"
+                  href="tel:015209290360"
+                  className="hover:text-[#1c1d1a] transition-colors flex items-center gap-1.5 text-xs font-medium"
+                  aria-label="Telefonnummer anrufen"
                 >
-                  <GithubIcon className="w-4 h-4" />
-                </a>
-                <a
-                  href="mailto:nicole.grabarkiewicz@example.com"
-                  className="hover:text-[#1c1d1a] transition-colors"
-                  aria-label="E-Mail"
-                >
-                  <Mail className="w-4 h-4" />
+                  <Phone className="w-4 h-4 text-[#3d5a3d]" />
+                  <span>0152/09290360</span>
                 </a>
               </div>
             </div>
