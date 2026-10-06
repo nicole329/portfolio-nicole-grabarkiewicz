@@ -88,6 +88,18 @@ export default function ElternplanetDetailPage() {
               <ExternalLink className="w-4 h-4" />
             </a>
           )}
+          {elternplanet.figmaDesignUrl && (
+            <a
+              href={elternplanet.figmaDesignUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium text-[#232621] bg-[#f4f1ea] border border-[#e2dcd0] hover:bg-[#e8e4db] transition-all shadow-sm"
+            >
+              <FigmaIcon className="w-4 h-4 text-[#0ACF83]" />
+              Figma Design Canvas öffnen
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          )}
         </div>
 
         {/* Tech Stack Pills */}
@@ -137,8 +149,8 @@ export default function ElternplanetDetailPage() {
             </a>
           </div>
 
-          {/* Embedded Iframe */}
-          <div className="w-full h-[600px] sm:h-[700px] rounded-2xl overflow-hidden border border-[#e6e2da] shadow-sm bg-[#fbf9f5]">
+          {/* Embedded Iframe Container */}
+          <div className="w-full max-w-3xl mx-auto h-[380px] sm:h-[450px] rounded-2xl overflow-hidden border border-[#e6e2da] shadow-sm bg-[#fbf9f5]">
             <iframe
               title="Elternplanet Figma Prototyp"
               src={figmaEmbedUrl}
@@ -148,6 +160,92 @@ export default function ElternplanetDetailPage() {
           </div>
         </section>
       )}
+
+      {/* Complete UX/UI Case Study Board */}
+      <section className="rounded-3xl bg-[#ffffff] border border-[#e6e2da] p-6 md:p-10 space-y-6 shadow-sm">
+        <div className="flex items-center justify-between flex-wrap gap-4 border-b border-[#e6e2da] pb-6">
+          <div className="flex items-center gap-3">
+            <div className="p-2.5 rounded-xl bg-[#fdf2e9] text-[#e59866] border border-[#faded0]">
+              <Sparkles className="w-6 h-6" />
+            </div>
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-serif-title font-bold text-[#1c1d1a]">
+                🎨 Gesamte UX/UI Case Study Board
+              </h2>
+              <p className="text-xs sm:text-sm text-[#787973]">
+                Vollständiger Design-Prozess: Research, Personas, User Flow, Style Guide, Wireframes & Iterationen
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="/images/elternplanet-casestudy.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-xl bg-[#232621] text-white text-xs font-semibold hover:bg-[#363933] transition-all flex items-center gap-1.5 shadow-sm"
+          >
+            Case Study in voller Auflösung öffnen
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
+        </div>
+
+        {/* High Resolution Case Study Image Showcase */}
+        <div className="bg-[#f8f6f2] rounded-2xl p-4 sm:p-6 border border-[#e8e4db] flex justify-center items-center overflow-hidden">
+          <div className="w-full max-w-3xl rounded-xl overflow-hidden border border-[#d8d2c4] shadow-md bg-[#ffffff] relative">
+            <img
+              src="/images/elternplanet-casestudy.png"
+              alt="Elternplanet UX/UI Case Study Board"
+              className="w-full h-auto object-top"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* User Flow & Screen Map Section */}
+      <section className="rounded-3xl bg-[#ffffff] border border-[#e6e2da] p-6 md:p-10 space-y-6 shadow-sm">
+        <div className="flex items-center justify-between flex-wrap gap-4 border-b border-[#e6e2da] pb-6">
+          <div className="flex items-center gap-3">
+            <div className="p-2.5 rounded-xl bg-[#e8f0fe] text-[#1a73e8] border border-[#d2e3fc]">
+              <Grid className="w-6 h-6" />
+            </div>
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-serif-title font-bold text-[#1c1d1a]">
+                🗺️ User Flow & Screen-Architektur
+              </h2>
+              <p className="text-xs sm:text-sm text-[#787973]">
+                Vollständige Map aller Screens & Nutzerpfade (Registrierung, Impfpass, Angebote, Basteln & Ausmalen)
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="/images/elternplanet-userflow.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-xl bg-[#232621] text-white text-xs font-semibold hover:bg-[#363933] transition-all flex items-center gap-1.5 shadow-sm"
+          >
+            User Flow in voller Auflösung öffnen
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
+        </div>
+
+        {/* Horizontal Scrollable User Flow Canvas */}
+        <div className="bg-[#f8f6f2] rounded-2xl p-4 sm:p-6 border border-[#e8e4db] space-y-3">
+          <div className="flex items-center justify-between text-xs font-mono text-[#787973] px-1">
+            <span>↔️ Horizontal scrollen für die komplette Screen-Map</span>
+            <span>20+ Screens & Interaktionspfade</span>
+          </div>
+          <div className="w-full overflow-x-auto rounded-xl border border-[#d8d2c4] shadow-inner bg-[#ffffff] p-3 scrollbar-thin">
+            <img
+              src="/images/elternplanet-userflow.png"
+              alt="Elternplanet Website User Flow Map"
+              className="w-auto h-auto min-w-[1000px] max-w-none object-contain"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Kernbereiche & Features der Plattform */}
       <section className="bg-white rounded-3xl p-6 sm:p-10 border border-[#e6e2da] shadow-sm space-y-8">

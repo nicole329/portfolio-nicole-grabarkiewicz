@@ -90,7 +90,7 @@ export function BottomSection() {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-5 py-2.5 rounded-full bg-[#232621] text-white text-xs font-semibold hover:bg-[#363933] transition-colors shadow-sm"
               >
-                Kontakt aufnehmen →
+                Nachricht schreiben →
               </Link>
 
               {/* Social & Contact Icons Row */}

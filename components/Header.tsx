@@ -15,7 +15,6 @@ export function Header() {
     { href: "/#ueber-mich", label: "Über mich" },
     { href: "/#ihk-abschluss", label: "IHK-Abschluss" },
     { href: "/#mein-weg", label: "Mein Weg" },
-    { href: "/#kontakt", label: "Kontakt" },
   ];
 
   return (

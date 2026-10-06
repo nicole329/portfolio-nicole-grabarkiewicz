@@ -22,6 +22,8 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   figmaUrl?: string;
+  figmaDesignUrl?: string;
+  framerUrl?: string;
   imageUrl?: string;
   detailUrl: string;
   badge?: string;
@@ -113,10 +115,12 @@ export const projectsData: Project[] = [
       "Mein Beitrag: Interaktive High-Fidelity Prototypen & Usability-Tests"
     ],
     figmaUrl:
-      "https://www.figma.com/proto/biSE10NdHur9ToUKbLqaQZ/nicole-grabarkiewicz?node-id=2539-9823&viewport=436%2C549%2C0.02&t=ynIN3LKIp5VMTMfu-1&scaling=fit-width&content-scaling=fixed&starting-point-node-id=2539%3A9823&page-id=2003%3A77",
+      "https://www.figma.com/proto/biSE10NdHur9ToUKbLqaQZ/nicole-grabarkiewicz?node-id=2003-77&t=FemyhpRu1wFzFLof-1",
+    figmaDesignUrl:
+      "https://www.figma.com/design/biSE10NdHur9ToUKbLqaQZ/nicole-grabarkiewicz?node-id=2003-77&t=FemyhpRu1wFzFLof-1",
     liveUrl:
-      "https://www.figma.com/proto/biSE10NdHur9ToUKbLqaQZ/nicole-grabarkiewicz?node-id=2539-9823&viewport=436%2C549%2C0.02&t=ynIN3LKIp5VMTMfu-1&scaling=fit-width&content-scaling=fixed&starting-point-node-id=2539%3A9823&page-id=2003%3A77",
-    imageUrl: "/images/elternplanet-main.png",
+      "https://www.figma.com/proto/biSE10NdHur9ToUKbLqaQZ/nicole-grabarkiewicz?node-id=2003-77&t=FemyhpRu1wFzFLof-1",
+    imageUrl: "/images/elternplanet-preview.png",
     detailUrl: "/projects/elternplanet"
   },
   {
@@ -156,6 +160,9 @@ export const projectsData: Project[] = [
       "Umsetzung von interaktiven Micro-Interactions & Hover-Effekten",
       "Barrierefreies Webdesign (Accessibility, Kontraste & responsive Breakpoints)"
     ],
+    framerUrl: "https://framer.com/projects/Portfolio-copy--LNFaCp55MTn6L43WNgC2-8gi9y",
+    liveUrl: "https://framer.com/projects/Portfolio-copy--LNFaCp55MTn6L43WNgC2-8gi9y",
+    imageUrl: "/images/framer-preview.png",
     detailUrl: "/projects/portfolio-framer"
   },
   {

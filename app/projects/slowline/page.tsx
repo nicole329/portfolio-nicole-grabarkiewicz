@@ -98,20 +98,10 @@ export default function SlowlineDetailPage() {
           </div>
         </div>
 
-        {/* Right Column: Interactive / Visual Laptop & Mobile Device Mockup */}
-        <div className="lg:col-span-5 relative flex justify-center items-center py-4">
-          
-          {/* Top Right Handwritten Quote Accent */}
-          <div className="absolute -top-6 right-0 z-20 hidden sm:block pointer-events-none">
-            <span className="font-handwriting text-2xl text-[#3B5436] font-normal block leading-tight rotate-3">
-              Gleicher Ablauf.<br />
-              Weniger Ablenkung.<br />
-              Mehr Du. ♡
-            </span>
-          </div>
-
+        {/* Right Column: Compact Presentation Banner Showcase */}
+        <div className="lg:col-span-5 relative flex justify-center items-center py-2">
           {/* Background Botanical Monstera Leaves Accents */}
-          <div className="absolute -top-10 -right-10 w-48 h-48 pointer-events-none opacity-40 z-0">
+          <div className="absolute -top-6 -right-6 w-36 h-36 pointer-events-none opacity-30 z-0">
             <Image
               src="/images/slowline/jungle-corner.png"
               alt="Monstera Leaf Accent"
@@ -120,68 +110,17 @@ export default function SlowlineDetailPage() {
             />
           </div>
 
-          {/* Device Mockups Composite Container */}
-          <div className="relative w-full max-w-md aspect-[4/3] z-10 flex items-center justify-center">
-            
-            {/* Laptop Mockup */}
-            <div className="w-[85%] aspect-[16/10] bg-[#1F241F] rounded-2xl p-2 shadow-2xl relative border border-[#3A423A]">
-              {/* Laptop Screen Header */}
-              <div className="w-full h-4 bg-[#2A302A] rounded-t-xl flex items-center px-2 gap-1 mb-1">
-                <div className="w-2 h-2 rounded-full bg-[#FF5F56]"></div>
-                <div className="w-2 h-2 rounded-full bg-[#FFBD2E]"></div>
-                <div className="w-2 h-2 rounded-full bg-[#27C93F]"></div>
-              </div>
-
-              {/* Laptop Screen Content (Slowline UI) */}
-              <div className="w-full h-[calc(100%-1.25rem)] bg-[#FAF8F5] rounded-b-lg p-4 flex flex-col justify-between items-center text-center relative overflow-hidden">
-                <div className="flex items-center justify-between w-full text-[10px] text-[#6B706B] font-mono">
-                  <span>slowline</span>
-                  <div className="w-3 h-3 rounded-full bg-[#E8EFE3] flex items-center justify-center text-[#4B6B40] font-bold">🦥</div>
-                </div>
-
-                <div className="my-auto space-y-2">
-                  <h4 className="font-serif-title text-base sm:text-lg font-bold text-[#1F241F] leading-tight">
-                    Ein Wort<br />Ein Moment<br />Nur Du.
-                  </h4>
-                  <div className="inline-block px-3 py-1 rounded-full bg-[#2F3E2B] text-white text-[10px] font-semibold">
-                    Session starten
-                  </div>
-                </div>
-
-                {/* Rope & Sloth Mascot */}
-                <div className="absolute right-3 top-2 bottom-2 w-6 border-r-2 border-dashed border-[#CBD8C6] flex items-center justify-center">
-                  <div className="relative w-7 h-7">
-                    <Image
-                      src="/images/slowline/sloth.png"
-                      alt="Sloth Mascot"
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
-              </div>
+          {/* Compact Presentation Image Container */}
+          <div className="relative w-full max-w-md rounded-2xl overflow-hidden border border-[#e6e2da] shadow-md bg-[#faf8f5] p-2 z-10 hover:shadow-lg transition-shadow">
+            <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden">
+              <Image
+                src="/images/slowline-main.png"
+                alt="Slowline Hauptprojekt Präsentation"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
-
-            {/* Mobile Phone Mockup (Overlapping Bottom Right) */}
-            <div className="absolute -bottom-4 -right-2 w-[42%] aspect-[9/19] bg-[#1F241F] rounded-[2rem] p-1.5 shadow-2xl border-2 border-[#3A423A]">
-              <div className="w-full h-full bg-[#FAF8F5] rounded-[1.6rem] p-3 flex flex-col justify-between items-center text-center relative overflow-hidden">
-                <div className="w-12 h-2.5 bg-[#1F241F] rounded-full mx-auto mb-2"></div>
-                <div className="my-auto space-y-1">
-                  <span className="font-serif-title text-[11px] font-bold text-[#1F241F] block leading-tight">
-                    Schreib langsamer.<br />Denk tiefer.
-                  </span>
-                </div>
-                <div className="relative w-10 h-10 mx-auto my-1">
-                  <Image
-                    src="/images/slowline/sloth2.png"
-                    alt="Sloth Mobile"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
 
