@@ -111,7 +111,7 @@ export function FeaturedSlowline() {
                   src="/images/slowline-main.png"
                   alt="Slowline App Preview"
                   fill
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>

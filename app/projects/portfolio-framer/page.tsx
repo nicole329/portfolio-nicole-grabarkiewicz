@@ -1,23 +1,16 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import {
   ArrowLeft,
   ExternalLink,
   Layers,
   Layout,
   Sparkles,
-  Monitor,
-  Smartphone,
   BarChart3,
 } from "lucide-react";
 import { projectsData } from "@/data/projects";
 
 export default function FramerPortfolioDetailPage() {
   const project = projectsData.find((p) => p.id === "portfolio-framer")!;
-  const [activeTab, setActiveTab] = useState<"desktop" | "mobile" | "full">("desktop");
 
   const skills = [
     { name: "UX/UI Design", percentage: "80%" },
@@ -98,7 +91,7 @@ export default function FramerPortfolioDetailPage() {
         </div>
       </div>
 
-      {/* High-Res Sharpened Layout Showcase with Tabs */}
+      {/* Ultra-Sharp Layout Gesamtansicht Showcase */}
       <section className="rounded-3xl bg-[#ffffff] border border-[#e6e2da] p-6 md:p-8 space-y-6 shadow-sm">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-[#e6e2da] pb-6">
           <div className="flex items-center gap-3">
@@ -107,110 +100,41 @@ export default function FramerPortfolioDetailPage() {
             </div>
             <div>
               <h2 className="text-2xl font-serif-title font-bold text-[#1c1d1a]">
-                Design & Layout Übersicht
+                📐 Design & Layout Gesamtansicht
               </h2>
               <p className="text-xs text-[#787973]">
-                Gestochen scharfe Ansichten des fertigen Framer Portfolios
+                Gestochen scharfes Gesamt-Design des Framer Portfolios (Desktop & Mobile)
               </p>
             </div>
           </div>
 
-          {/* Interactive View Toggle Buttons */}
-          <div className="flex items-center bg-[#f4f1ea] p-1.5 rounded-2xl border border-[#e2dcd0] text-xs font-semibold text-[#232621]">
-            <button
-              onClick={() => setActiveTab("desktop")}
-              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl transition-all ${
-                activeTab === "desktop"
-                  ? "bg-[#ffffff] text-[#1c1d1a] shadow-sm font-bold"
-                  : "text-[#666860] hover:text-[#1c1d1a]"
-              }`}
-            >
-              <Monitor className="w-4 h-4" />
-              Desktop
-            </button>
-            <button
-              onClick={() => setActiveTab("mobile")}
-              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl transition-all ${
-                activeTab === "mobile"
-                  ? "bg-[#ffffff] text-[#1c1d1a] shadow-sm font-bold"
-                  : "text-[#666860] hover:text-[#1c1d1a]"
-              }`}
-            >
-              <Smartphone className="w-4 h-4" />
-              Phone (Mobile)
-            </button>
-            <button
-              onClick={() => setActiveTab("full")}
-              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl transition-all ${
-                activeTab === "full"
-                  ? "bg-[#ffffff] text-[#1c1d1a] shadow-sm font-bold"
-                  : "text-[#666860] hover:text-[#1c1d1a]"
-              }`}
-            >
-              <Layout className="w-4 h-4" />
-              Gesamtübersicht
-            </button>
-          </div>
+          <a
+            href="/images/framer-gesamtansicht.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-xl bg-[#232621] text-white text-xs font-semibold hover:bg-[#363933] transition-all flex items-center gap-1.5 shadow-sm"
+          >
+            Gesamtansicht in voller Auflösung öffnen
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
         </div>
 
-        {/* Display Container for Selected View */}
-        <div className="bg-[#f8f6f2] rounded-2xl p-4 sm:p-8 border border-[#e8e4db] flex justify-center items-center min-h-[500px]">
-          {activeTab === "desktop" && (
-            <div className="w-full max-w-3xl space-y-3">
-              <div className="flex items-center justify-between text-xs font-mono text-[#787973] px-2">
-                <span>💻 Desktop View Showcase</span>
-                <span>Framer Responsive Canvas</span>
-              </div>
-              <div className="relative rounded-2xl overflow-hidden border border-[#d8d2c4] shadow-md bg-[#ffffff]">
-                <Image
-                  src="/images/framer-desktop-view.png"
-                  alt="Framer Portfolio Desktop View"
-                  width={1200}
-                  height={6000}
-                  className="w-full h-auto object-top"
-                  priority
-                />
-              </div>
+        {/* Display Container for Sharp Gesamtansicht */}
+        <div className="bg-[#f8f6f2] rounded-2xl p-4 sm:p-8 border border-[#e8e4db] flex justify-center items-center overflow-hidden">
+          <div className="w-full max-w-4xl space-y-3">
+            <div className="flex items-center justify-between text-xs font-mono text-[#787973] px-2">
+              <span>📐 Desktop & Mobile Gesamtansicht</span>
+              <span>Ultra-Sharp High-DPI</span>
             </div>
-          )}
-
-          {activeTab === "mobile" && (
-            <div className="w-full max-w-sm space-y-3">
-              <div className="flex items-center justify-between text-xs font-mono text-[#787973] px-2">
-                <span>📱 Phone (Mobile) View Showcase</span>
-                <span>Responsive Breakpoint</span>
-              </div>
-              <div className="relative rounded-3xl overflow-hidden border-4 border-[#1c1d1a] shadow-xl bg-[#ffffff]">
-                <Image
-                  src="/images/framer-mobile-view.png"
-                  alt="Framer Portfolio Mobile View"
-                  width={600}
-                  height={6000}
-                  className="w-full h-auto object-top"
-                  priority
-                />
-              </div>
+            <div className="relative rounded-2xl overflow-hidden border border-[#d8d2c4] shadow-md bg-[#ffffff] p-4">
+              <img
+                src="/images/framer-gesamtansicht.png"
+                alt="Framer Portfolio Gesamtansicht"
+                className="w-full h-auto object-top"
+                loading="lazy"
+              />
             </div>
-          )}
-
-          {activeTab === "full" && (
-            <div className="w-full max-w-4xl space-y-3">
-              <div className="flex items-center justify-between text-xs font-mono text-[#787973] px-2">
-                <span>📐 Desktop & Mobile Nebeneinander</span>
-                <span>Multi-Device View</span>
-              </div>
-              <div className="relative rounded-2xl overflow-hidden border border-[#d8d2c4] shadow-md bg-[#ffffff] p-4">
-                <Image
-                  src="/images/framer-full-showcase.png"
-                  alt="Framer Portfolio Full Showcase"
-                  width={1500}
-                  height={4000}
-                  className="w-full h-auto object-top"
-                  priority
-                />
-              </div>
-            </div>
-          )}
+          </div>
         </div>
       </section>
 

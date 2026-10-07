@@ -168,23 +168,51 @@ export const projectsData: Project[] = [
   {
     id: "mybookspace",
     title: "MyBookSpace",
-    subtitle: "Web Application",
+    subtitle: "Full-Stack Web Application · Google Books API",
     period: "2026",
     featured: false,
-    technologies: ["React", "TypeScript", "Tailwind CSS", "REST API", "LocalStorage"],
-    description:
-      "Persönliche Bücherverwaltung mit React. Bücher entdecken, verwalten und bewerten.",
-    longDescription:
-      "Webanwendung zur Organisation der eigenen Bibliothek mit Suchfunktion, Kategorisierung, Lesestatus und Bewertungsfunktion.",
-    problem:
-      "Bücherfreunde suchen nach einer unkomplizierten Möglichkeit, gelesene und geplante Bücher ohne überladene Social-Features zu organisieren.",
-    solution:
-      "Reaktives Single Page Application Dashboard mit dynamischen Filteroptionen, Suchleiste und lokaler Datenspeicherung.",
-    contributions: [
-      "React Component State Architecture",
-      "Integration externer Buch-APIs & Suchfilter",
-      "Lokale Persistenz & Bewertungssystem"
+    badge: "Web App",
+    technologies: [
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Google Books API",
+      "Firebase Auth",
+      "Cloud Firestore",
+      "Vite"
     ],
+    description:
+      "Persönliche digitale Bücherverwaltung mit React & Google Books API. Bücher entdecken, organisieren & bewerten.",
+    longDescription:
+      "MyBookSpace ist eine moderne Webanwendung zur Organisation der eigenen Bibliothek. Nutzer können live in über 40 Millionen Titeln der Google Books API suchen, Bücher zu ihrer persischen Bibliothek hinzufügen, Lesestatus verwalten und Bewertungen abgeben.",
+    problem:
+      "Bücherenthusiasten suchen oft nach einer schlanken, werbefreien Möglichkeit, gelesene und geplante Bücher ohne überladene Netzwerke übersichtlich zu verwalten.",
+    solution:
+      "Ein hochreaktives Single Page Application Dashboard mit Echtzeit-Suche über die Google Books API, flexiblen Filterkategorien (Gelesen, Am Lesen, Wunschliste) und Firebase-Authentifizierung.",
+    architecture: [
+      { step: "React 19 Frontend", description: "Komponentenbasierte SPA mit responsivem Tailwind CSS Layout & Filter-Tabs" },
+      { step: "Google Books API", description: "RESTful Anbindung zur Live-Durchsuchung von +40 Millionen Titeln & Metadaten" },
+      { step: "Firebase Auth & Firestore", description: "Sichere Benutzeranmeldung & Cloud-Persistenz der persönlichen Bibliothek" },
+      { step: "LocalStorage Fallback", description: "Schneller lokaler Caching-Mechanismus für reibungsloses Offline-Browsing" }
+    ],
+    techDecisions: [
+      {
+        title: "Warum Google Books REST API?",
+        rationale: "Zugriff auf die weltweit umfangreichste Buchdatenbank mit detaillierten Metadaten, Buchcovern und Autoreninformationen."
+      },
+      {
+        title: "Warum React 19 & Tailwind CSS?",
+        rationale: "Schnelle Renderzeiten, declarative State Management für Filterzustände und ein maßgeschneidertes, minimalistisches UI."
+      }
+    ],
+    contributions: [
+      "Fullstack Architecture & React State Management",
+      "Google Books API Anbindung & Suchoptimierung",
+      "UI/UX Konzept & Responsive Bibliotheks-Grid",
+      "Firebase Cloud Persistenz & Auth Workflow"
+    ],
+    liveUrl: "https://my-book-space.vercel.app/",
+    imageUrl: "/images/mybookspace-preview.png",
     detailUrl: "/projects/mybookspace"
   },
   {
