@@ -90,6 +90,26 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         </div>
       </div>
 
+      {/* Project Image Preview Showcase */}
+      {project.imageUrl && (
+        <div className="rounded-3xl bg-[#ffffff] border border-[#e6e2da] p-6 md:p-8 space-y-4 shadow-sm">
+          <div className="flex items-center justify-between text-xs font-mono text-[#787973] px-1">
+            <span className="font-bold text-[#1c1d1a]">🖼️ {project.title} – UI & Benutzeroberfläche</span>
+            <span>Original Screenshot</span>
+          </div>
+          <div className="bg-[#f8f6f2] rounded-2xl p-4 sm:p-6 border border-[#e8e4db] flex justify-center items-center overflow-hidden">
+            <div className="relative rounded-xl overflow-hidden border border-[#d8d2c4] shadow-md bg-[#191919] p-2 max-w-4xl w-full">
+              <img
+                src={project.imageUrl}
+                alt={`${project.title} Vorschau`}
+                className="w-full h-auto object-contain rounded-lg mx-auto"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Problem & Solution (if available) */}
       {(project.problem || project.solution) && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

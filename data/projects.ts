@@ -261,6 +261,7 @@ export const projectsData: Project[] = [
       "Mein Beitrag: Integration der The Movie Database (TMDB) REST API",
       "Mein Beitrag: Algorithmus für Genre-Filter & Zufallsempfehlungen"
     ],
+    imageUrl: "/images/filmroulette-preview.png",
     detailUrl: "/projects/filmroulette"
   }
 ];

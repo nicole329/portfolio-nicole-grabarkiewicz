@@ -75,13 +75,13 @@ export function ProjectCard({ project, isFeatured = false }: ProjectCardProps) {
       }`}
     >
       {/* Project Image Box */}
-      <div className="rounded-xl overflow-hidden aspect-[16/10] mb-4 border border-[#e2dcd0] relative">
+      <div className="rounded-xl overflow-hidden aspect-[16/10] mb-4 border border-[#e2dcd0] relative bg-[#faf8f5] flex items-center justify-center p-1">
         {project.imageUrl ? (
           <Image
             src={project.imageUrl}
             alt={project.title}
             fill
-            className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+            className="object-contain object-center p-1 group-hover:scale-105 transition-transform duration-300 mx-auto"
           />
         ) : (
           getCardGraphic(project.id)

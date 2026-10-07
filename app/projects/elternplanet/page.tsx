@@ -161,8 +161,8 @@ export default function ElternplanetDetailPage() {
         </section>
       )}
 
-      {/* Complete UX/UI Case Study Board */}
-      <section className="rounded-3xl bg-[#ffffff] border border-[#e6e2da] p-6 md:p-10 space-y-6 shadow-sm">
+      {/* Complete UX/UI Case Study Board (Ultra-Sharp 1:1 & Figma Canvas Integration) */}
+      <section className="rounded-3xl bg-[#ffffff] border border-[#e6e2da] p-6 md:p-10 space-y-8 shadow-sm">
         <div className="flex items-center justify-between flex-wrap gap-4 border-b border-[#e6e2da] pb-6">
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-xl bg-[#fdf2e9] text-[#e59866] border border-[#faded0]">
@@ -170,34 +170,103 @@ export default function ElternplanetDetailPage() {
             </div>
             <div>
               <h2 className="text-2xl sm:text-3xl font-serif-title font-bold text-[#1c1d1a]">
-                🎨 Gesamte UX/UI Case Study Board
+                🎨 UX/UI Case Study & Design System
               </h2>
               <p className="text-xs sm:text-sm text-[#787973]">
-                Vollständiger Design-Prozess: Research, Personas, User Flow, Style Guide, Wireframes & Iterationen
+                Vollständige Design-Architektur: Research, Personas, Style Guide, Grid System & UI-Komponenten
               </p>
             </div>
           </div>
 
-          <a
-            href="/images/elternplanet-casestudy.png"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded-xl bg-[#232621] text-white text-xs font-semibold hover:bg-[#363933] transition-all flex items-center gap-1.5 shadow-sm"
-          >
-            Case Study in voller Auflösung öffnen
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+          <div className="flex items-center gap-2">
+            {elternplanet.figmaDesignUrl && (
+              <a
+                href={elternplanet.figmaDesignUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-xl bg-[#232621] text-white text-xs font-semibold hover:bg-[#363933] transition-all flex items-center gap-1.5 shadow-sm"
+              >
+                <FigmaIcon className="w-3.5 h-3.5 text-[#0ACF83]" />
+                Figma Vektor Canvas öffnen (100% Scharf)
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
+          </div>
         </div>
 
-        {/* High Resolution Case Study Image Showcase */}
-        <div className="bg-[#f8f6f2] rounded-2xl p-4 sm:p-6 border border-[#e8e4db] flex justify-center items-center overflow-hidden">
-          <div className="w-full max-w-3xl rounded-xl overflow-hidden border border-[#d8d2c4] shadow-md bg-[#ffffff] relative">
-            <img
-              src="/images/elternplanet-casestudy.png"
-              alt="Elternplanet UX/UI Case Study Board"
-              className="w-full h-auto object-top"
-              loading="lazy"
-            />
+        {/* Structured High-Sharpness Case Study Kapitel Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Section 1: Problem & Zielgruppe */}
+          <div className="p-6 rounded-2xl bg-[#fbf9f5] border border-[#e2dcd0] space-y-3">
+            <span className="px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-[#fdf2e9] text-[#a8442a] border border-[#faded0] inline-block">
+              Phase 1 · Research
+            </span>
+            <h3 className="font-serif-title text-lg font-bold text-[#1c1d1a]">
+              Zielgruppe & Problemstellung
+            </h3>
+            <p className="text-xs text-[#555850] leading-relaxed">
+              Junge Eltern benötigen eine vertrauenswürdige, ruhige Plattform. Bisherige Angebote sind oft unübersichtlich oder werbeüberladen.
+            </p>
+          </div>
+
+          {/* Section 2: Personas */}
+          <div className="p-6 rounded-2xl bg-[#fbf9f5] border border-[#e2dcd0] space-y-3">
+            <span className="px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-[#e8f0fe] text-[#1a73e8] border border-[#d2e3fc] inline-block">
+              Phase 2 · User Personas
+            </span>
+            <h3 className="font-serif-title text-lg font-bold text-[#1c1d1a]">
+              Nutzer-Profile & Use Cases
+            </h3>
+            <div className="space-y-1.5 text-xs text-[#555850]">
+              <p>👤 <strong>Laura (32)</strong>: Sucht Impfpass-Erinnerung & Kinderarzt-Termine.</p>
+              <p>👤 <strong>Markus (35)</strong>: Braucht schnelle Bastelideen am Wochenende.</p>
+            </div>
+          </div>
+
+          {/* Section 3: Design System */}
+          <div className="p-6 rounded-2xl bg-[#fbf9f5] border border-[#e2dcd0] space-y-3">
+            <span className="px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-[#e4ebe4] text-[#3d5a3d] border border-[#cbd8cb] inline-block">
+              Phase 3 · Style Guide
+            </span>
+            <h3 className="font-serif-title text-lg font-bold text-[#1c1d1a]">
+              Farbklima & Typografie
+            </h3>
+            <div className="flex gap-2 pt-1">
+              <span className="w-6 h-6 rounded-full bg-[#f5e6e0] border border-[#dcd4c3] inline-block" title="Warm Rose" />
+              <span className="w-6 h-6 rounded-full bg-[#e4ebe4] border border-[#dcd4c3] inline-block" title="Sage Green" />
+              <span className="w-6 h-6 rounded-full bg-[#e8f0fe] border border-[#dcd4c3] inline-block" title="Soft Blue" />
+              <span className="w-6 h-6 rounded-full bg-[#1c1d1a] border border-[#dcd4c3] inline-block" title="Dark Slate" />
+            </div>
+          </div>
+        </div>
+
+        {/* Crisp Native 1:1 Pixel Image Container (Non-Stretched for Maximum Clarity) */}
+        <div className="bg-[#f8f6f2] rounded-2xl p-4 sm:p-8 border border-[#e8e4db] space-y-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs font-mono text-[#787973] gap-2 px-1">
+            <span className="font-bold text-[#1c1d1a]">
+              🖼️ Original Case Study Board (Natives 1:1 Format ohne Verzerrung)
+            </span>
+            <a
+              href="/images/elternplanet-casestudy.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#dc2626] hover:underline font-bold flex items-center gap-1"
+            >
+              HD Original in neuem Tab öffnen ↗
+            </a>
+          </div>
+
+          {/* Centered 1:1 scale container prevents pixelation blur */}
+          <div className="bg-white rounded-xl p-3 border border-[#d8d2c4] shadow-md flex justify-center items-center">
+            <div className="max-w-[423px] w-full mx-auto overflow-hidden rounded-lg border border-[#e8e4db]">
+              <img
+                src="/images/elternplanet-casestudy.png"
+                alt="Elternplanet UX/UI Case Study Board - Gestochen scharf"
+                className="w-full h-auto object-contain mx-auto block"
+                loading="lazy"
+                style={{ imageRendering: "crisp-edges" }}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -211,7 +280,7 @@ export default function ElternplanetDetailPage() {
             </div>
             <div>
               <h2 className="text-2xl sm:text-3xl font-serif-title font-bold text-[#1c1d1a]">
-                🗺️ User Flow & Screen-Architektur
+                🗺️ User Flow & Screen-Architektur (2560px HD)
               </h2>
               <p className="text-xs sm:text-sm text-[#787973]">
                 Vollständige Map aller Screens & Nutzerpfade (Registrierung, Impfpass, Angebote, Basteln & Ausmalen)
@@ -233,14 +302,14 @@ export default function ElternplanetDetailPage() {
         {/* Horizontal Scrollable User Flow Canvas */}
         <div className="bg-[#f8f6f2] rounded-2xl p-4 sm:p-6 border border-[#e8e4db] space-y-3">
           <div className="flex items-center justify-between text-xs font-mono text-[#787973] px-1">
-            <span>↔️ Horizontal scrollen für die komplette Screen-Map</span>
+            <span>↔️ Horizontal scrollen für die komplette 2560px Screen-Map</span>
             <span>20+ Screens & Interaktionspfade</span>
           </div>
           <div className="w-full overflow-x-auto rounded-xl border border-[#d8d2c4] shadow-inner bg-[#ffffff] p-3 scrollbar-thin">
             <img
               src="/images/elternplanet-userflow.png"
               alt="Elternplanet Website User Flow Map"
-              className="w-auto h-auto min-w-[1000px] max-w-none object-contain"
+              className="w-auto h-auto min-w-[1200px] max-w-none object-contain mx-auto"
               loading="lazy"
             />
           </div>
