@@ -216,30 +216,6 @@ export const projectsData: Project[] = [
     detailUrl: "/projects/mybookspace"
   },
   {
-    id: "hr-projekt",
-    title: "HR-Projekt Gruppe 1",
-    subtitle: "Teamprojekt",
-    period: "2026",
-    featured: false,
-    isTeamProject: true,
-    badge: "Teamprojekt",
-    technologies: ["React", "Teamwork", "Agile Workflow", "Frontend", "REST APIs"],
-    description:
-      "Weblösung für HR-Prozesse. Konzeption, Frontend-Entwicklung und Teamarbeit.",
-    longDescription:
-      "Kollaboratives Teamprojekt zur Digitalisierung interner HR-Prozesse (Bewerberübersicht, Status-Board, Teamverteilung).",
-    problem:
-      "Unübersichtliche analoge oder veraltete Bewerber- und Teamprozesse in Unternehmen.",
-    solution:
-      "Ein übersichtliches HR-Dashboard mit Status-Kanban, Bewerberlisten und Teamzuordnung im agilen Entwicklerteam.",
-    contributions: [
-      "Mein Beitrag: Frontend-Entwicklung der Dashboard-Komponenten",
-      "Mein Beitrag: Anbindung von API-Endpunkten im Team",
-      "Mein Beitrag: Agile Absprachen & Code-Reviews"
-    ],
-    detailUrl: "/projects/hr-projekt"
-  },
-  {
     id: "filmroulette",
     title: "Filmroulette",
     subtitle: "React Application · Teamprojekt",

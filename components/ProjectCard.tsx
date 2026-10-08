@@ -41,14 +41,6 @@ export function ProjectCard({ project, isFeatured = false }: ProjectCardProps) {
             <span className="text-[10px] text-slate-400">React Book Manager</span>
           </div>
         );
-      case "hr-projekt":
-        return (
-          <div className="w-full h-full bg-[#e8edeb] flex flex-col items-center justify-center p-4">
-            <span className="text-2xl mb-1">👥</span>
-            <span className="font-bold text-base text-[#1c1d1a]">HR-Projekt</span>
-            <span className="text-[10px] text-[#555850]">Gruppe 1 Teamlösung</span>
-          </div>
-        );
       case "filmroulette":
         return (
           <div className="w-full h-full bg-[#191919] text-white flex flex-col items-center justify-center p-4">
